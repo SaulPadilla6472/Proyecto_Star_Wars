@@ -1,0 +1,15 @@
+main{
+    margin: auto;
+    height: 95vh;
+    width: 95vw;
+    background-color: beige;
+    border-radius: 20px;
+
+}
+#input_character_name{
+    width: 80vw;
+    margin: auto;
+    margin-top: 2vh;
+    border-radius: 10px;
+    outline: none;
+}
