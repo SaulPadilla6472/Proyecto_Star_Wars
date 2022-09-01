@@ -1,3 +1,6 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
 body{
     background-image: url("/img/background.png");
 }
@@ -17,6 +20,18 @@ main{
     outline: none;
 }
 
+#buscar{
+    background-color: lightblue;
+    border-radius: 10px;
+    border: none;
+    transition: 1s;
+}
+#buscar:hover{
+    scale: 1.5;
+    background: cadetblue;
+    cursor: pointer;
+}
+
 #datos{
     display: flex;
     flex-direction: column;
@@ -25,9 +40,9 @@ main{
 }
 
 .tabla_nombre{
-    
-    
+    display: inline;
 }
+
 img{
     float: right;
     max-height: 80vh;
