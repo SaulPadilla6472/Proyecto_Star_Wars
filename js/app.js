@@ -1,17 +1,35 @@
 let characters = JSON.parse(file).results // array de personajes
 
 let input_character_name = document.getElementById("input_character_name")
+let datos = document.getElementById("datos")
+let imagen = document.getElementById("personaje")
+let main = document.getElementById("main")
 
 function search_character_button_click() {
   let character_details = search_character(input_character_name.value)
-  container.innerHTML = `
-  <p>
-    <span style="color: red">Nombre: ${character_details.name}</span><br />
-    <span>Género: ${character_details.gender}</span><br />
-    <span>Altura: ${character_details.height}</span><br />
-    <span>Color de ojos: ${character_details.eye_color}</span>
-    <img src="${character_details.image}"/>
-  </p>`
+
+  imagen.src = character_details.img
+  imagen.style.display = "inline"
+  console.log(character_details.afiliacion)
+
+  if(character_details.afiliacion==="jedi"){
+    main.style.boxShadow = "10px 10px 30px 10px rgba(0,252,10,0.4)";
+    console.log("true")
+
+    
+  }
+  else if(character_details.afiliacion=="sith"){
+    main.style.boxShadow = "10px 10px 30px 10px rgba(252,0,0,0.4)"
+  }
+
+  datos.innerHTML = `
+  <h2 class="tabla_nombre" id="nombre">Nombre: ${character_details.name}</h2>
+        <h2 class="tabla_nombre" id="altura">Altura: ${character_details.height} cm</h2>  
+        <h2 class="tabla_nombre" id="peso">Peso: ${character_details.mass} Kg</h2>   
+        <h2 class="tabla_nombre" id="genero">Genero: ${character_details.gender}</h2>    
+        <h2 class="tabla_nombre" id="color_cabello">Color de cabello: ${character_details.hair_color}</h2>   
+        <h2 class="tabla_nombre" id="color_ojos:">Color de ojos: ${character_details.eye_color}</h2>  
+        <h2 class="tabla_nombre" id="año:">Año de nacimiento: ${character_details.birth_year}</h2>`
 
 }
 

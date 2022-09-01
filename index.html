@@ -9,22 +9,24 @@
     <script src="js/swapi.js"></script>
 </head>
 <body>
-    <main>
+    <main id="main">
         <div id="input">
     <input type="text" id="input_character_name">
     <button onclick="search_character_button_click()">
         Buscar
       </button>
+      <img id="personaje" src="/img/luke.png" alt="imagen_personaje">
         </div>
       <div id="datos">
-        <h2 id="nombre">Nombre:</h2>
-        <h2 id="altura">Altura:</h2>  
-        <h2 id="peso">Peso:</h2>   
-        <h2 id="genero">Genero:</h2>    
-        <h2 id="color_cabello">Color de cabello:</h2>   
-        <h2 id="color_ojos:">Color de ojos:</h2>  
-        <h2 id="año:">Año de nacimiento:</h2>      
+        <h2 class="tabla_nombre" id="nombre">Nombre:</h2>
+        <h2 class="tabla_nombre" id="altura">Altura:</h2>  
+        <h2 class="tabla_nombre" id="peso">Peso:</h2>   
+        <h2 class="tabla_nombre" id="genero">Genero:</h2>    
+        <h2 class="tabla_nombre" id="color_cabello">Color de cabello:</h2>   
+        <h2 class="tabla_nombre" id="color_ojos:">Color de ojos:</h2>  
+        <h2 class="tabla_nombre" id="año:">Año de nacimiento:</h2>      
       </div>
+      
     </main>
 
     <script src="js/app.js"></script>
